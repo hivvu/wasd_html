@@ -1,0 +1,29 @@
+.pub{
+    @apply md:mb-14 mb-6 flex flex-col items-center;
+    
+    a{
+        @apply border border-lightSecondary dark:border-darkSecondary;
+    }
+}
+
+.ad-blocker-enabled{
+    .pub a{
+        @apply w-full relative border border-dashed border-2 border-gray-200;
+    }
+
+    .pub-leaderboard a:after,
+    .pub-mrec a:after{
+        content: 'Ad Blocker detectado';
+        @apply text-gray-300 h-full text-lg flex items-center justify-center;
+    }
+
+    .pub-leaderboard a{
+        height: 90px;
+        max-width: 720px;
+    }
+
+    .pub-mrec a{
+        height: 300px;
+        max-width: 300px;
+    }
+}

@@ -1,0 +1,150 @@
+header.bg-opaque{
+    @apply dark:bg-darkPrimary border-b border-lightSecondary dark:border-darkSecondary;
+
+    &:before{
+        @apply bg-white/90 backdrop-blur-sm dark:filter-none dark:bg-transparent;
+    }
+
+    .site-branding{
+        .letters,
+        rect{
+            @apply fill-black dark:fill-white;
+        }
+
+        .circle{
+            @apply stroke-[#388ECD];
+        }
+    }
+
+    .menu-toggle{
+        path, 
+        line{
+            @apply dark:stroke-white stroke-black;
+        }
+    }
+
+    .header-tools{
+        button{
+            @apply outline-offset-4 outline-gray-300 dark:outline-darkSecondary;
+        }
+        
+        svg line,
+        svg circle{
+            @apply stroke-black dark:stroke-white;
+        }
+    }
+    
+}
+
+header.bg-transparent{ 
+    &:before{
+        @apply transition-all ease-in-out duration-300;
+    }
+
+    .site-branding{
+        .letters,
+        rect{
+            @apply fill-lightPrimary;
+        }
+
+        .circle{
+            @apply stroke-lightPrimary;
+        }
+    }
+
+    .menu-toggle{
+        path, 
+        line{
+            @apply stroke-white;
+        }
+
+        /* After open the menu, the hamburguer should be black on light theme */
+        &:hover path,
+        &:hover line,
+        &.is-open path, 
+        &.is-open line{
+            @apply stroke-black dark:stroke-white;
+        }
+    }
+
+    .header-tools{
+        button{
+            @apply outline-gray-300;
+        }
+
+        svg circle,
+        svg line,{
+            @apply stroke-white;
+        }
+    }
+
+}
+
+header.js-invert{
+    &:before{
+        @apply bg-white/90 backdrop-blur-sm dark:bg-darkPrimary dark:filter-none;
+    }
+
+    .site-branding{
+        .letters,
+        rect{
+            @apply fill-black dark:fill-white;
+        }
+
+        .circle{
+            @apply stroke-[#388ECD];
+        }
+    }
+
+    /* After start scrolling the bar with now have a background */
+    .menu-toggle{
+        path, 
+        line{
+            @apply stroke-black dark:stroke-white;
+        }
+    }
+
+    .header-tools{
+        button{
+            @apply outline-darkSecondary dark:outline-lightSecondary;
+        }
+
+        svg circle,
+        svg line{
+            @apply stroke-black dark:stroke-white;
+        }
+    }
+}
+
+/* Common styles to all options */
+header{
+    @apply sticky top-0 z-30;
+
+    &:before{
+        @apply content-[""] absolute inset-0 z-[-1];
+    }
+    
+    .site-branding{
+        @apply flex flex-1 justify-center;
+
+        svg{
+            @apply w-32 md:w-auto;
+        }
+    }
+
+    .header-tools{
+        @apply flex flex-1 items-center justify-end space-x-5 text-gray-100;
+    }
+}
+
+.search{
+    @apply bg-lightSecondary dark:bg-darkSecondary absolute top-[-110%] w-full py-2 transition-all;
+
+    &.is-open{
+        @apply top-0;
+    }
+
+    #search-input{
+        @apply pl-10 pb-2 bg-transparent border-b outline-none border-gray-400 focus:border-black dark:border-gray-500 dark:focus:border-white w-full placeholder:italic;
+    }
+}

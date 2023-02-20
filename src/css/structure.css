@@ -1,0 +1,115 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    @apply text-black font-body bg-lightPrimary dark:bg-darkPrimary dark:text-white;
+}
+
+.container{
+    @apply px-6 md:px-0;
+}
+
+.sidebar-posts{
+    @apply rounded-[20px] mb-10 p-4 bg-lightSecondary dark:bg-darkSecondary;
+}
+
+.custom-grid{
+    @apply 
+        grid  
+        lg:grid-cols-custom
+        md:grid-cols-2
+        sm:grid-cols-1
+        md:gap-10
+        items-start;
+}
+
+.horizontal-scroll{
+    @apply mx-auto bg-lightSecondary dark:bg-darkSecondary mb-10;
+
+    &__content{
+        @apply overflow-x-auto pb-8 p-1.5;
+    }
+
+    &__inner-content{
+        @apply flex flex-row flex-nowrap gap-6;
+        width: auto;
+    }
+}
+
+.video-posts{
+    .card{
+        @apply w-56 shrink-0;
+    }
+}
+
+.tag{
+    @apply rounded-lg bg-black text-white inline-block px-4 py-2 mb-4;
+}
+
+.article-info{
+    @apply text-xs text-gray-500; 
+}
+
+.tech-sheet{
+    @apply bg-lightSecondary dark:bg-darkSecondary p-6 rounded-lg mb-10 text-sm md:text-xs;
+    
+    .title{
+        @apply text-lg mb-4;
+    }
+
+    ul li{
+        @apply mb-4; 
+    }
+}
+
+ul.review-likes {
+    @apply ml-0;
+    
+    li{
+        background: url(src/img/icon-plus.svg) no-repeat left 5px;
+    }
+}
+
+ul.review-dislikes {
+    @apply ml-0;
+    
+    li{
+        background: url(src/img/icon-minus.svg) no-repeat left 10px;
+    }
+}
+
+.comment-count{
+    @apply text-xs text-gray-500 sm:hidden md:block;
+    padding-left: 20px;
+    background: url(src/img/icon-comments.svg) no-repeat left top;
+
+    &:hover{
+        @apply text-primary;
+    }
+}
+
+.share{
+    @apply hidden lg:inline-block;
+
+    a{
+        @apply block w-11 h-11 mb-4 p-2 rounded-full border border-lightTerciary dark:border-darkSecondary transition-all duration-300 ease-in-out flex justify-center items-center;
+
+        svg{
+            @apply w-5;
+        }
+
+        &:hover{
+            @apply border-black dark:border-white; 
+        }
+    }
+}
+
+
+.social-networks{
+    @apply flex justify-center lg:justify-start gap-5 md:gap-3;
+
+    a{
+       @apply outline-offset-4 outline-gray-300 dark:outline-darkSecondary;         
+    }
+}

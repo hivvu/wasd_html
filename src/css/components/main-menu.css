@@ -1,0 +1,20 @@
+.main-menu{
+    @apply hidden md:block mb-10;
+
+    ul{
+        @apply flex flex-row gap-5;
+    }
+
+    a{
+        @apply py-2 px-3 outline-none rounded-md;
+        
+        &:focus-visible,
+        &:hover{
+            @apply bg-lightSecondary dark:bg-darkSecondary;
+        }
+        
+        .is-current{
+            @apply text-white bg-gradient-to-r from-primary to-secondary;
+        }
+    }
+} 

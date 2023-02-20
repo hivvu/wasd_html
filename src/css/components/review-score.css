@@ -1,0 +1,115 @@
+.score {
+    @apply relative w-40 h-40 md:mt-[-120px] mb-5;
+    
+    svg {
+        position: relative;
+        transform: rotate(-90deg);
+        z-index: 20;
+    }
+    
+    svg circle {
+        @apply fill-none;
+        /* fill: none;
+        stroke: #CFD3D4; */
+        stroke-width: 20;
+        stroke-linecap: round;
+
+        &.track{
+            @apply stroke-lightTerciary dark:stroke-darkTerciary;
+        }
+    }
+    
+    svg circle.progress {
+        /* @apply stroke-primary; */
+        /* stroke: #3498db;  */
+        stroke-dasharray: 625px;
+        stroke-dashoffset: 625px;
+        /* animation: dash 800ms ease-in-out forwards; */
+
+        &.m{stroke: #FF5733;}
+        &.nr{stroke: #FFC000;}
+        &.ok{stroke: #FFEA00;}
+        &.b{stroke: #7dca02;}
+        &.r{
+            @apply stroke-[#9fa0a0] dark:stroke-[#C0C0C0];
+        }
+        &.e{
+            stroke: #FFD700;
+        }
+        &.no-value{stroke: #01c9ab;}
+    }
+
+    /* .epic{position: relative;} */
+    /* &.epic:before{
+        content: '✨';
+        font-size: 20px;
+        position: absolute;
+        top: 15%;
+        right: 10%;
+        width: 10px;
+        height: 10px;
+        z-index: 50;
+        color: white;
+    } */
+
+    .sparkles path {
+        /* fill: white; */
+        @apply fill-white dark:fill-white;
+        /* @apply stroke-gray-50 dark:stroke-none; */
+        transform-origin: 50% 50%;
+        transform-box: fill-box;
+        transform: scale(0);
+        animation: sparkle var(--duration) var(--delay) infinite ease-in-out;
+        /* position: absolute;
+        z-index: 50; 
+        top: 10px; left: 0; */
+        /* stroke-width: .2;
+        stroke: #dfc57b; */
+        filter: drop-shadow(0px 0px 2px rgb(0 0 0 / 0.3));
+      }
+      
+      @keyframes sparkle {
+        0% {
+          transform: scale(0) rotate(0);
+        }
+        50% { 
+          transform: scale(0) rotate(0);
+        }
+        70% {
+          transform: scale(-1, 0) rotate(15deg);
+        }
+        80% {
+          transform: scale(3) rotate(20deg); 
+        }
+        100% {
+          transform: scale(0) rotate(0);
+        }
+      }
+
+    
+    .value {
+        @apply text-6xl text-black dark:text-white font-bold absolute inset-0 rounded-full flex justify-center items-center bg-white dark:bg-darkPrimary z-10;
+
+        &.m{background: #ca0202; color: #fff;}
+        &.nr{background: #ca6d02; color: #fff;}
+        &.ok{background: #c5c700; color: #fff;}
+        &.b{background: #7dca02; color: #fff;}
+        &.r{background: #9fa0a0; color: #fff;}
+        &.e{background: #b0a300; color: #fff;}
+        &.no-value{background: #01c9ab; color: #fff;}
+    }
+
+    &.js-animate .progress{
+        animation: dash 800ms ease-in-out forwards;
+    }
+}
+
+.score-description{
+
+}
+  
+@keyframes dash {
+to {
+    stroke-dashoffset: calc(625px - (625px * var(--percent)) / 100);
+}
+}

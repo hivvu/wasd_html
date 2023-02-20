@@ -1,0 +1,23 @@
+.btn{
+    @apply rounded-full font-bold cursor-pointer py-3 px-5 tracking-wide;
+    
+    &--primary{
+        @apply text-white bg-primary;
+    }
+
+    &--secondary{
+        @apply text-primary dark:text-white border-primary border-2 transition-all;
+
+        &:hover{
+            @apply text-white bg-primary;
+        }
+    }
+
+    &:focus-visible{
+        outline: 3px solid theme('colors.primary');   
+    }
+
+    &:active{
+        @apply scale-95;
+    }
+}

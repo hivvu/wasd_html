@@ -1,0 +1,136 @@
+.card{
+    @apply w-full outline-none;
+
+    img{ 
+        @apply rounded-xl object-cover aspect-video w-full transition-all;
+    }
+
+    h3 {
+        @apply text-xl font-semibold mb-3;
+    }
+    
+    p {
+        @apply text-sm text-gray-500;
+    }
+    
+    &__horizontal{
+        @apply mb-5 flex;
+    
+        img{ 
+            @apply 2xl:w-72 w-36;
+        }
+    
+        div {
+            @apply ml-5 2xl:ml-10;
+        } 
+
+        h3{
+            @apply text-base;
+        }
+
+        p{
+            @apply hidden md:block;
+        }
+        
+        &-small{
+            @apply mb-5 flex; 
+        
+            img{ 
+                @apply w-36;
+            }
+            
+            h3{
+                @apply text-base;
+            }
+
+            p{
+                @apply hidden md:block; 
+            }
+
+            div {
+                @apply ml-5; 
+            } 
+        }
+
+        &-smaller{
+            @apply mb-5 flex; 
+        
+            img{ 
+                @apply w-24 aspect-video;
+            }
+            
+            h3{
+                @apply text-xs;
+            }
+
+            div {
+                @apply ml-5; 
+            } 
+        }
+    }
+    
+    &__vertical{
+        @apply inline-block mb-10;
+        
+        img{
+            @apply mb-3;
+        }
+
+        h3{
+            @apply text-base;
+        }
+
+        &-video{
+            position: relative;
+            
+            &:after{
+                content: '';
+                background: rgba(1, 0, 0, .4) url(src/img/icon-play.svg) no-repeat 60% center;
+                width: 60px;
+                height: 60px;
+                border: 2px solid #fff;
+                position: absolute;
+                border-radius: 50%; 
+                left: 0;
+                right: 0;
+                margin: auto;
+                display: block;
+                top: 35px;
+                transition: background .3s ease-in-out;
+            }
+
+            &:hover:after{
+                background-color: rgba(1, 0, 0, .6);
+            }
+        }
+    }
+    
+    &__gamecover{
+        @apply w-44 shrink-0; 
+        
+        div{
+            @apply flex flex-col px-2;
+        }
+        img{
+            @apply mb-3 w-44 h-64;
+        }
+        h3{
+            @apply mb-1 text-base;
+        }
+        .platforms{
+            @apply mb-2 text-gray-500;
+        }
+    } 
+
+
+    &:focus-visible{
+        img{
+            outline: thick solid theme('colors.primary');
+        }
+
+        .link-underline{
+            @apply text-primary;
+        }
+    }
+}
+

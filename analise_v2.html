@@ -1,0 +1,494 @@
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WASD 2023</title>
+ 
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body class="debug-screens">
+    <header class="bg-transparent">
+        <div class="container mx-auto flex items-center justify-between py-3">
+            
+            <div class="top-menu">
+                <button type="button" class="menu-toggle" aria-controls="menu" aria-expanded="false">
+                    <span class="sr-only">Abrir o menu</span>
+                    <svg width="20" height="12" viewBox="0 0 20 12" fill="none">
+                        <path d="M0 1H20" stroke-width="2"/>
+                        <line y1="6" x2="20" y2="6" stroke-width="2"/>
+                        <line y1="11" x2="20" y2="11" stroke-width="2"/>
+                    </svg>
+                </button>
+                    
+                <div class="menu">
+                    <ul>
+                        <li>
+                            <a href="#" class="is-current" aria-current="page">Início</a>
+                        </li>
+                        <li>
+                            <a href="#">Análises</a>
+                        </li>
+                        <li>
+                            <a href="#">Notícias</a>
+                        </li>
+                        <li>
+                            <a href="#">Artigos</a>
+                        </li>
+                        <li>
+                            <a href="#">Hardware</a>
+                        </li>
+                    </ul>
+
+                    <ul>
+                        <li>
+                            <a href="#">Quem somos</a>
+                        </li>
+                        <li>
+                            <a href="#">A nossa missão</a>
+                        </li>
+                        <li>
+                            <a href="#">Política de privacidade</a>
+                        </li>
+                        <li>
+                            <a href="#">Contactos</a>
+                        </li>
+                        <li>
+                            <a href="#">Acessibilidade</a>
+                        </li>
+                    </ul>
+
+                    <ul class="social-networks">
+                        <li>
+                            <a class="group" href="#" title="Facebook" target="_blank">
+                                <svg class="group-hover:scale-110" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="group" href="#" title="Twitter" target="_blank">
+                                <svg class="group-hover:scale-110" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="group" href="#" title="Discord" target="_blank">
+                                <svg class="group-hover:scale-110" width="24" height="24" viewBox="0 -28.5 256 256" fill="currentColor" preserveAspectRatio="xMidYMid">
+                                    <path d="M216.856339,16.5966031 C200.285002,8.84328665 182.566144,3.2084988 164.041564,0 C161.766523,4.11318106 159.108624,9.64549908 157.276099,14.0464379 C137.583995,11.0849896 118.072967,11.0849896 98.7430163,14.0464379 C96.9108417,9.64549908 94.1925838,4.11318106 91.8971895,0 C73.3526068,3.2084988 55.6133949,8.86399117 39.0420583,16.6376612 C5.61752293,67.146514 -3.4433191,116.400813 1.08711069,164.955721 C23.2560196,181.510915 44.7403634,191.567697 65.8621325,198.148576 C71.0772151,190.971126 75.7283628,183.341335 79.7352139,175.300261 C72.104019,172.400575 64.7949724,168.822202 57.8887866,164.667963 C59.7209612,163.310589 61.5131304,161.891452 63.2445898,160.431257 C105.36741,180.133187 151.134928,180.133187 192.754523,160.431257 C194.506336,161.891452 196.298154,163.310589 198.110326,164.667963 C191.183787,168.842556 183.854737,172.420929 176.223542,175.320965 C180.230393,183.341335 184.861538,190.991831 190.096624,198.16893 C211.238746,191.588051 232.743023,181.531619 254.911949,164.955721 C260.227747,108.668201 245.831087,59.8662432 216.856339,16.5966031 Z M85.4738752,135.09489 C72.8290281,135.09489 62.4592217,123.290155 62.4592217,108.914901 C62.4592217,94.5396472 72.607595,82.7145587 85.4738752,82.7145587 C98.3405064,82.7145587 108.709962,94.5189427 108.488529,108.914901 C108.508531,123.290155 98.3405064,135.09489 85.4738752,135.09489 Z M170.525237,135.09489 C157.88039,135.09489 147.510584,123.290155 147.510584,108.914901 C147.510584,94.5396472 157.658606,82.7145587 170.525237,82.7145587 C183.391518,82.7145587 193.761324,94.5189427 193.539891,108.914901 C193.539891,123.290155 183.391518,135.09489 170.525237,135.09489 Z" fill-rule="nonzero"></path>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="group" href="#" title="Youtube" target="_blank">
+                                <svg class="group-hover:scale-110" width="24" height="24" viewBox="0 0 24 24">
+                                    <path fill="currentColor" d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
+                                    <polygon class="fill-white dark:fill-darkSecondary" points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="group" href="#" title="Tik Tok" target="_blank">
+                                <svg class="group-hover:scale-110" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M19.589 6.686a4.793 4.793 0 0 1-3.77-4.245V2h-3.445v13.672a2.896 2.896 0 0 1-5.201 1.743l-.002-.001.002.001a2.895 2.895 0 0 1 3.183-4.51v-3.5a6.329 6.329 0 0 0-5.394 10.692 6.33 6.33 0 0 0 10.857-4.424V8.687a8.182 8.182 0 0 0 4.773 1.526V6.79a4.831 4.831 0 0 1-1.003-.104z"/>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="Instagram" target="_blank">
+                                <svg class="group-hover:scale-110" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="site-branding">
+                <svg width="184" height="45" viewBox="0 0 184 45" fill="none">
+                    <rect x="15.4302" y="15.3" width="6.825" height="6.3" rx="2"/>
+                    <rect x="9.19873" y="23.4" width="6.825" height="6.3" rx="2"/>
+                    <rect x="17.5073" y="23.4" width="6.825" height="6.3" rx="2"/>
+                    <rect x="25.8159" y="23.4" width="6.825" height="6.3" rx="2"/>
+                    <path class="circle" d="M37.2794 24C37.2794 33.2335 29.8784 40.7 20.7718 40.7C11.6651 40.7 4.26416 33.2335 4.26416 24C4.26416 14.7665 11.6651 7.29999 20.7718 7.29999C29.8784 7.29999 37.2794 14.7665 37.2794 24Z" stroke-width="2"/>
+                    <path class="circle" d="M40.5435 24C40.5435 35.056 31.6811 44 20.7717 44C9.86239 44 1 35.056 1 24C1 12.944 9.86239 4 20.7717 4C31.6811 4 40.5435 12.944 40.5435 24Z" stroke-width="2"/>
+                    <path class="letters" d="M62.475 40C61.5583 40 60.9083 39.4 60.525 38.2L51.275 8.9C51.075 8.26666 51.1667 7.63333 51.55 7C51.95 6.36667 52.525 6.05 53.275 6.05C53.675 6.05 54.0583 6.18333 54.425 6.45C54.7917 6.7 55.0583 7.1 55.225 7.65L63.375 33.6H62.275L70.025 7.9C70.2083 7.3 70.5167 6.85 70.95 6.55C71.4 6.25 71.8583 6.1 72.325 6.1C72.825 6.1 73.3083 6.25 73.775 6.55C74.2417 6.85 74.5583 7.3 74.725 7.9L82.475 33.6H81.375L89.525 7.65C89.7083 7.1 89.9667 6.70833 90.3 6.475C90.65 6.225 91.025 6.1 91.425 6.1C92.1583 6.1 92.7417 6.38333 93.175 6.95C93.6083 7.51666 93.7083 8.16666 93.475 8.9L84.225 38.2C83.825 39.4 83.0917 40 82.025 40H81.925C80.8083 40 80.075 39.4 79.725 38.2L71.675 12.15H72.775L64.675 38.2C64.5083 38.8 64.2583 39.25 63.925 39.55C63.6083 39.85 63.125 40 62.475 40ZM91.8617 39.8C90.5284 39.2833 90.1284 38.3667 90.6617 37.05L102.562 7.75C103.062 6.65 103.845 6.1 104.912 6.1H105.012C106.095 6.15 106.828 6.7 107.212 7.75L119.312 37.05C119.845 38.3667 119.462 39.2833 118.162 39.8C116.845 40.3167 115.928 39.9333 115.412 38.65L112.712 32.1H97.1367L94.5617 38.65C94.0451 39.95 93.1451 40.3333 91.8617 39.8ZM98.7867 27.9H110.987L104.762 12.75L98.7867 27.9ZM130.238 40C127.388 40 125.163 39.425 123.563 38.275C121.979 37.125 120.988 35.35 120.588 32.95C120.521 32.2167 120.671 31.6667 121.038 31.3C121.404 30.9333 121.938 30.75 122.638 30.75C123.338 30.75 123.846 30.9167 124.163 31.25C124.496 31.5833 124.721 32.1 124.838 32.8C125.088 33.95 125.621 34.7417 126.438 35.175C127.271 35.5917 128.538 35.8 130.238 35.8H137.438C139.588 35.8 141.046 35.4167 141.812 34.65C142.596 33.8667 142.988 32.4167 142.988 30.3C142.988 28.15 142.588 26.6833 141.788 25.9C140.988 25.1 139.538 24.7 137.438 24.7H131.238C128.088 24.7 125.746 23.9333 124.213 22.4C122.696 20.85 121.938 18.5 121.938 15.35C121.938 12.2167 122.688 9.89167 124.188 8.375C125.704 6.85833 128.038 6.1 131.188 6.1H137.138C139.788 6.1 141.863 6.64167 143.363 7.725C144.879 8.80833 145.838 10.4667 146.238 12.7C146.338 13.4167 146.204 13.9667 145.838 14.35C145.471 14.7167 144.921 14.9 144.188 14.9C143.521 14.9 143.021 14.725 142.688 14.375C142.354 14.025 142.138 13.5167 142.038 12.85C141.771 11.8667 141.263 11.2 140.513 10.85C139.763 10.4833 138.638 10.3 137.138 10.3H131.188C129.188 10.3 127.846 10.6583 127.163 11.375C126.479 12.075 126.138 13.4 126.138 15.35C126.138 17.3167 126.488 18.6667 127.188 19.4C127.888 20.1333 129.238 20.5 131.238 20.5H137.438C140.721 20.5 143.163 21.3 144.763 22.9C146.379 24.5 147.188 26.9667 147.188 30.3C147.188 33.6167 146.388 36.0667 144.788 37.65C143.188 39.2167 140.738 40 137.438 40H130.238ZM154.982 40C153.582 40 152.882 39.3 152.882 37.9V8.2C152.882 6.8 153.582 6.1 154.982 6.1H167.032C171.382 6.1 174.582 7.13333 176.632 9.2C178.698 11.25 179.732 14.45 179.732 18.8V27.3C179.732 31.65 178.707 34.8583 176.657 36.925C174.623 38.975 171.415 40 167.032 40H154.982ZM157.082 35.8H167.032C169.165 35.8 170.848 35.5417 172.082 35.025C173.332 34.4917 174.215 33.6083 174.732 32.375C175.265 31.125 175.532 29.4333 175.532 27.3V18.8C175.532 16.6833 175.265 15.0083 174.732 13.775C174.215 12.525 173.332 11.6333 172.082 11.1C170.848 10.5667 169.165 10.3 167.032 10.3H157.082V35.8Z" />
+                </svg>
+            </div>
+
+            <div class="header-tools">
+                <button type="button" class="search-toggle">
+                    <svg stroke-width="2" width="24" height="24" viewBox="0 0 24 24">
+                        <circle fill="transparent" cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </button>
+                <button type="button" class="theme-toggle">
+                    <svg class="dark:hidden" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    
+                    <svg class="hidden dark:inline-block" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div class="search">
+            <div class="container mx-auto py-3">
+                <form class="flex items-center justify-between m-0" role="search" action="/" method="get">
+                    <label for="search-input" class="sr-only">
+                        <span>Pesquisa</span>
+                    </label>
+                    
+                    <div class="relative w-full">
+                        <svg class="absolute top-0 left-0 stroke-black dark:stroke-white" stroke-width="2" width="24" height="24" viewBox="0 0 24 24">
+                            <circle fill="transparent" cx="11" cy="11" r="8"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        </svg>
+                        <input type="text" id="search-input" placeholder="Pesquisar..."/>
+                    </div>
+                
+                    <button type="submit" class="sr-only" tabindex="-1">
+                        <span>Submeter pesquisa</span>
+                    </button>
+    
+                    <button class="search-close ml-2 outline-offset-4 focus-visible:outline-gray-300 dark:outline-darkSecondary" type="button">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                        <span class="sr-only">Close</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </header>
+    
+    <div class="relative mt-[-70] mb-10">
+        <img class="lg:w-screen h-5/6 object-cover object-top" loading="lazy" src="https://www.wasd.pt/wp-content/uploads/2023/02/HogwartsLegacy-1-scaled.webp" />
+    </div>
+ 
+    <div class="container mx-auto grid lg:grid-cols-review md:grid-cols-none gap-x-10">
+        <h1 class="mb-4 col-span-2">Análise - Hogwarts Legacy</h1>
+
+        <div class="article-info col-span-2 lg:col-span-1 flex justify-between mb-8">
+            <span class="sm:mb-3 md:mb-0">João Pinto, <span class="hidden md:inline-block">Publicado a</span> 14 de Fevereiro de 2023</span>
+            <a href="#comments" class="comment-count">100 <span class="hidden md:inline-block">comentários</span></a>
+        </div>
+        
+    </div>
+
+    <div class="container mx-auto grid lg:grid-cols-review md:grid-cols-none gap-10">
+
+        <div class="lg:order-1 order-2 relative"> 
+
+            <div class="share absolute top-0 left-0">
+                <a href="#" title="Partilhar no Facebook">
+                    <svg class="group-hover:scale-110" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                    </svg>
+                </a>
+                <a href="#" title="Partilhar no Twitter"> 
+                    <svg class="group-hover:scale-110" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                    </svg>
+                </a>
+                <a href="#" title="Partilhar no WhatsApp">
+                    <svg width="24" height="24" viewBox="0 0 17 17" fill="currentColor">
+                        <path d="M12.5523 10.1405C12.5174 10.1224 11.2111 9.42481 10.979 9.33421C10.8843 9.29731 10.7827 9.26128 10.6748 9.26128C10.4984 9.26128 10.3502 9.35661 10.2348 9.54385C10.1043 9.75419 9.70934 10.2549 9.58729 10.4045C9.57135 10.4242 9.54959 10.4478 9.53656 10.4478C9.52487 10.4478 9.32272 10.3576 9.26152 10.3287C7.86031 9.66864 6.79673 8.08129 6.65089 7.8136C6.63006 7.77512 6.62919 7.75764 6.62901 7.75764C6.63413 7.73727 6.68125 7.68604 6.70557 7.65961C6.77672 7.58327 6.8538 7.48264 6.92837 7.3853C6.96368 7.33918 6.99905 7.293 7.03378 7.24947C7.14198 7.11295 7.19015 7.00696 7.246 6.88419L7.27526 6.82041C7.41162 6.52661 7.29515 6.27867 7.25752 6.19861C7.22663 6.13162 6.67509 4.68804 6.61645 4.53637C6.47544 4.1704 6.28911 4 6.03018 4C6.00616 4 6.03018 4 5.92943 4.00461C5.80674 4.01022 5.13862 4.10561 4.84322 4.30755C4.52996 4.52174 4 5.20448 4 6.40516C4 7.4858 4.63234 8.50612 4.90383 8.89417C4.91058 8.90395 4.92297 8.92383 4.94095 8.95234C5.98068 10.5991 7.27683 11.8194 8.59079 12.3887C9.85576 12.9367 10.4548 13 10.7953 13H10.7954C10.9385 13 11.053 12.9878 11.1541 12.977L11.2182 12.9704C11.6552 12.9284 12.6155 12.3887 12.8339 11.7304C13.006 11.2119 13.0514 10.6454 12.9369 10.4398C12.8585 10.3 12.7233 10.2296 12.5523 10.1405Z"/>
+                        <path d="M8.6509 0C4.04676 0 0.30102 3.71759 0.30102 8.28711C0.30102 9.76507 0.696546 11.2118 1.44582 12.4779L0.0116885 16.7084C-0.0150258 16.7872 0.00484433 16.8744 0.0631853 16.9338C0.105299 16.9768 0.162426 17 0.220767 17C0.24312 17 0.26564 16.9966 0.287608 16.9896L4.69878 15.5879C5.90589 16.2328 7.2702 16.5733 8.65095 16.5733C13.2546 16.5733 17 12.8561 17 8.28711C17 3.71759 13.2546 0 8.6509 0ZM8.6509 14.8471C7.35166 14.8471 6.09328 14.4719 5.01157 13.7621C4.9752 13.7382 4.93297 13.726 4.89047 13.726C4.86801 13.726 4.84549 13.7294 4.82358 13.7363L2.61385 14.4387L3.32719 12.3342C3.35026 12.2661 3.33872 12.191 3.29622 12.1329C2.4725 11.0074 2.03706 9.67758 2.03706 8.28711C2.03706 4.66948 5.00401 1.72627 8.65084 1.72627C12.2972 1.72627 15.2638 4.66948 15.2638 8.28711C15.2639 11.9043 12.2973 14.8471 8.6509 14.8471Z"/>
+                    </svg>
+                </a>
+                <a href="#" title="Partilhar no Telegram">
+                    <svg width="24" height="24" viewBox="0 0 19 16" fill="currentColor">
+                        <path d="M17.5936 0.00149037C17.3481 0.0121977 17.1168 0.0791187 16.9112 0.15407H16.9084C16.6999 0.231699 15.7092 0.622518 14.2045 1.2141C12.6998 1.80836 10.7468 2.57929 8.80814 3.34487C4.93648 4.87335 1.13049 6.37773 1.13049 6.37773L1.17618 6.36167C1.17618 6.36167 0.913499 6.44198 0.639399 6.61865C0.499495 6.70431 0.345313 6.82209 0.211119 7.00679C0.0769242 7.19149 -0.031574 7.47524 0.00839926 7.76702C0.0740692 8.26223 0.416694 8.55936 0.662241 8.72265C0.910644 8.88861 1.14763 8.96624 1.14763 8.96624H1.15334L4.72234 10.0932C4.88223 10.575 5.81018 13.4339 6.03288 14.0924C6.16422 14.4859 6.29271 14.7322 6.4526 14.9195C6.52969 15.0159 6.62105 15.0962 6.72955 15.1605C6.77238 15.1846 6.81806 15.2033 6.86375 15.2193C6.87802 15.2274 6.8923 15.2301 6.90943 15.2327L6.87231 15.2247C6.88373 15.2274 6.8923 15.2354 6.90086 15.2381C6.92942 15.2461 6.9494 15.2488 6.98652 15.2541C7.55185 15.4148 8.00583 15.0855 8.00583 15.0855L8.03152 15.0668L10.1387 13.2679L13.6706 15.8083L13.7505 15.8404C14.4871 16.1429 15.2324 15.9742 15.6264 15.6771C16.0232 15.3773 16.1774 14.9945 16.1774 14.9945L16.2031 14.9329L18.9327 1.82442C19.0098 1.50052 19.0298 1.19804 18.9441 0.903587C18.8585 0.609134 18.6386 0.333419 18.3731 0.186192C18.1047 0.0362892 17.8392 -0.00921701 17.5936 0.00149037ZM17.5194 1.40683C17.5165 1.44966 17.5251 1.44431 17.5051 1.52729V1.53532L14.8012 14.5073C14.7898 14.526 14.7698 14.5662 14.7156 14.6064C14.6585 14.6492 14.6128 14.676 14.3758 14.5876L10.0559 11.4825L7.44621 13.7123L7.99441 10.4305C7.99441 10.4305 14.7612 4.51733 15.0525 4.26303C15.3437 4.00873 15.2466 3.95519 15.2466 3.95519C15.2666 3.64468 14.8069 3.86418 14.8069 3.86418L5.90725 9.03316L5.9044 9.01978L1.63872 7.67333V7.67065C1.63587 7.67065 1.63016 7.66797 1.6273 7.66797C1.63016 7.66797 1.65014 7.65994 1.65014 7.65994L1.67298 7.64923L1.69583 7.6412C1.69583 7.6412 5.50467 6.13682 9.37633 4.60834C11.315 3.84276 13.268 3.07183 14.7698 2.47757C16.2716 1.88599 17.3823 1.45234 17.4451 1.42825C17.5051 1.40683 17.4765 1.40683 17.5194 1.40683Z"/>
+                    </svg>
+                </a>
+            </div>
+
+            <div class="rich-text">
+                <p>Desde que J. K. Rowling inventou a série <strong>Harry Potter</strong>, todo um universo foi criado, universo esse que se expandiu dos livros para os filmes e outros formatos. Por isso, Hogwarts Legacy tem muito para honrar.</p>
+                <p>Dada a facilidade de leitura dos livros juvenis, há uma inteira geração que cresceu com estes contos de fantasia. O sucesso nos livros e no cinema, tanto da série Harry Potter, como de Fantastic Beasts (claramente menos popular), inevitavelmente gerou uma incursão por outros meios de entretenimento, onde se incluem os videojogos. Aqui, porém, o sucesso não foi tão amplamente alcançado no passado. Por isso, além de ser obrigado a honrar este pesado legado, Hogwarts Legacy ainda tem de, finalmente, dar aos fãs o que pedem há tantos anos. O jogo que os coloque realmente “lá”.</p>
+
+                <iframe src="https://www.youtube.com/embed/BtyBjOW8sGY" title="Hogwarts Legacy - Official Launch Trailer 4K" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+                <p>Fãs desta franquia, que é que seria a vossa maior fantasia tornada realidade se vivessem neste universo de magia? Certamente seria receber a célebre carta de admissão na escola de magia de Hogwarts. Foi assim que começou a aventura de Harry Potter e que levou milhões de fãs a mergulharem nas histórias. E é mesmo assim que este jogo pretende introduzir a nossa experiência. Como um promissor “mago”, recebemos a célebre carta da coruja. Contudo, não somos propriamente pequenos estudantes inexperientes em busca de uma aventura.</p>
+                
+                <blockquote>"Como um promissor “mago”, recebemos a célebre carta da coruja. [...] a vossa maior fantasia tornada realidade."</blockquote>
+                
+                <p>A personagem que nomeamos e personalizamos, é admitida na escola como um aluno… do quinto ano! É a forma como o jogo nos permite rapidamente saltar para a acção, por aprender alguns truques sem termos de forçosamente começar pelo básico. Já temos uma varinha (emprestada), por exemplo. E até já sabemos algumas magias mais simples. A ideia é que a nossa personagem possui habilidades únicas e é por isso que foi extraordinariamente admitida com mais idade, ingressando directamente para uma turma no seu quinto ano de Hogwarts.</p>
+
+                <img loading="lazy" src="https://www.wasd.pt/wp-content/uploads/2023/02/HogwartsLegacy-5.webp" />
+
+                <p>As coisas também não são perfeitas nas missões principais. Embora sejam bem mais variadas, assentes numa narrativa coesa, também não são particularmente céleres, estando pejadas de imenso diálogo que, por vezes, quebra muito o ritmo. Entendo que esta é uma aventura narrativa e as personagens são o foco principal da história. <a href="#">O casting de vozes é também excelente</a> e muito dedicado aos seus papéis. Mas, talvez menos conversa e mais acção favorecesse mais a passada do jogo, especialmente com situações em que só temos duas opções de diálogo inconsequentes (porque não temos um sistema de moral).</p>
+
+                <img loading="lazy" src="https://www.wasd.pt/wp-content/uploads/2023/02/HogwartsLegacy-6.jpg" />
+                
+                <p>Felizmente, lá temos momentos memoráveis para nos reanimar. Quero dar particular destaque às missões aéreas que envolvem o uso da mítica vassoura mágica para deambular pelo mundo fantástico em jogo. Se a vassoura não for suficiente, saibam que há várias Bestas Mágicas para caçar e domesticar para montar, como o mítico Hippogriff e outros seres míticos. De facto, não esperava que o voo fosse tão gratificante e entusiasmante, com óptimas dinâmicas e bastante convite para a exploração no vasto mapa. Acima de tudo, é mesmo muito divertido.</p>
+                
+                <p>Outro elemento de claro destaque, são as vastas áreas do jogo. Além do enorme castelo de Hogwarts recriado com imenso rigor e cheio de pormenores e segredos, podemos visitar vários locais conhecidos do lore. A aldeia de Hogsmeade está pejada de curiosidades para descobrir. Também a área em redor do castelo está repleta de actividades, coleccionáveis e pontos de interesse que os fãs de Harry Potter vão adorar. Há um claro cuidado ao recriar este mundo tão bem estabelecido em vários formatos multimédia e até em parques temáticos.</p>
+                
+                <img loading="lazy" src="https://www.wasd.pt/wp-content/uploads/2023/02/HogwartsLegacy-1.jpg" />
+
+                <h2>Veredicto</h2>
+
+                <p>Outro elemento de claro destaque, são as vastas áreas do jogo. Além do enorme castelo de Hogwarts recriado com imenso rigor e cheio de pormenores e segredos, podemos visitar vários locais conhecidos do lore. A aldeia de Hogsmeade está pejada de curiosidades para descobrir. Também a área em redor do castelo está repleta de actividades, coleccionáveis e pontos de interesse que os fãs de Harry Potter vão adorar. Há um claro cuidado ao recriar este mundo tão bem estabelecido em vários formatos multimédia e até em parques temáticos.</p>
+                
+            </div>
+        </div>
+
+        <div class="lg:order-2 order-1">
+
+            <div class="tech-sheet">
+                <span class="title font-bold font-gradient"> Ficha técnica </span>
+                <ul>
+                    <li>
+                        <strong>Produtora:</strong> Avalanche Software 
+                    </li>
+                    <li>
+                        <strong>Editora:</strong> Warner Bros. 
+                    </li>
+                    <li>
+                        <strong>Lançamento:</strong> 10 de Fevereiro de 2023
+                    </li>
+                    <li>
+                        <strong>Plataformas:</strong> PC, PS5, Xbox Series X|S 
+                    </li>
+                    <li>
+                        <strong>Género:</strong> Aventura, Role Playing Game 
+                    </li>
+                </ul>
+            </div>
+
+            <div class="pub pub-mrec">
+                <a href="#" target="_blank">
+                    <img loading="lazy" src="https://www.wasd.pt/wp-content/uploads/2022/10/300x250-Barracuda-X.jpg" alt="" />
+                </a>
+                <div class="text-xs text-gray-400 text-right">Pub</div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="bg-lightSecondary dark:bg-darkSecondary py-10 md:mt-14 mb-10">
+        <div class="container mx-auto grid grid-cols-review gap-10 mb-10">
+            <div class="col-span-2 md:col-span-1">
+                Quem nos dera que todos os universos de fantasia fossem tão bem recriados desta forma.
+            </div>
+            <div class="flex flex-col items-center col-span-2 md:col-span-1">
+                <div class="score epic" style="--percent: 100">
+                    <svg width="160" height="160" viewbox="-30 -20 220 200">
+                        <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+                            <stop offset="5%" stop-color="#dfc57b"></stop>
+                            <stop offset="25%" stop-color="#ecdcab"></stop>
+                            <stop offset="40%" stop-color="#fcfcf7"></stop>
+                            <stop offset="60%" stop-color="#dfc57b"></stop>
+                            <stop offset="80%" stop-color="#bf932a"></stop>
+                            <stop offset="100%" stop-color="#dfc57b"></stop>
+                        </linearGradient>
+                      <circle class="track" cx="80" cy="80" r="100"></circle>
+                      <circle stroke="url(#gold)" class="progress" cx="80" cy="80" r="100"></circle>
+                      <g class="sparkles">
+                        <path style="--duration: 1s; --delay: 1.2s" d="M154.243 162.401C154.243 162.401 155.277 156.998 156.197 162.401C156.197 162.401 161.37 163.321 156.197 164.241C156.197 164.241 155.277 169.759 154.243 164.241C151.139 163.666 151.369 163.091 154.243 162.401Z"/>
+                        <path style="--duration: 2s; --delay: 0.8s" d="M164.218 3.7407C164.218 3.7407 165.83 -4.67588 167.263 3.7407C167.263 3.7407 175.321 5.17331 167.263 6.60593C167.263 6.60593 165.83 15.2016 164.218 6.60593C159.383 5.71054 159.741 4.81516 164.218 3.7407Z"/>
+                        <path style="--duration: 1.5s; --delay: 1.7s" d="M157.599 11.7124C157.599 11.7124 158.337 7.85949 158.993 11.7124C158.993 11.7124 162.682 12.3682 158.993 13.024C158.993 13.024 158.337 16.9589 157.599 13.024C155.386 12.6142 155.55 12.2043 157.599 11.7124Z"/>
+                        <path style="--duration: 1.7s; --delay: 1.2s" d="M57.5991 185.712C57.5991 185.712 58.3369 181.859 58.9927 185.712C58.9927 185.712 62.6817 186.368 58.9927 187.024C58.9927 187.024 58.3369 190.959 57.5991 187.024C55.3858 186.614 55.5497 186.204 57.5991 185.712Z"/>
+                        <path style="--duration: 2.1s; --delay: 1.9s" d="M2.57404 33.7564C2.57404 33.7564 3.76161 27.5546 4.81724 33.7564C4.81724 33.7564 10.7551 34.812 4.81724 35.8676C4.81724 35.8676 3.76161 42.2014 2.57404 35.8676C-0.988697 35.2078 -0.724791 34.5481 2.57404 33.7564Z"/>
+                      </g>
+                    </svg>
+                    <span class="value">E</span>
+                </div>
+                <div class="score-description text-center">
+                    <strong class="mb-4 block uppercase">Épico</strong>
+                    <p>Simplesmente imperdível, candidato a jogo do ano.</p>
+                    <a href="#" class="inline-block mt-4 text-primary text-sm">Mais sobre a nossa pontuação</a> 
+                </div>
+            </div>
+        </div>
+
+        <div class="container mx-auto grid xl:grid-cols-5 md:grid-cols-2 sm:grid-cols-1 md:gap-10 rich-text mb-10">
+            <div class="likes-dislikes xl:col-span-2">
+                <span class="font-gradient font-bold mb-4">Prós</span>
+                <ul class="review-likes">
+                    <li>Visualmente fantástico e cheio de detalhes</li>
+                    <li>Toda a recriação de Hogwarts e Hogsmeade</li>
+                    <li>Combate e puzzles com recurso a magia</li>
+                    <li>Enredo interessante e empolgante</li>
+                </ul>
+            </div>
+            <div class="xl:col-span-2">
+                <span class="font-gradient font-bold mb-4">Contras</span>
+                <ul class="review-dislikes">
+                    <li>Faria sentido um sistema de moral</li>
+                    <li>Bosses podem envolver algum "grind"</li>
+                    <li>Missões secundárias algo repetitivas</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container mx-auto text-sm italic">
+            <div class="">
+                <p>Esta análise foi realizada com uma cópia de análise cedida pelo estúdio de produção e/ou representante nacional de relações públicas.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mx-auto grid grid-cols-review mb-10" id="comments">
+        <div class="col-span-2">
+            <h2 class="font-gradient font-bold">Também podem gostar</h2>
+        </div>
+        <div class="col-span-2 lg:col-span-1 grid grid-cols-2 md:gap-10">
+            <div class="col-span-2 md:col-span-1">
+                <a class="link card card__horizontal-small" href="#" title="">
+                    <img loading="lazy" src="https://www.wasd.pt/wp-content/uploads/2022/11/GOWRHD-e1667487730868.jpg" alt="">
+                    <div>
+                        <h3 class="link-underline"><span>Análise – God of War: Ragnarök</span></h2>
+                        <p>Absolutamente obrigatório na vossa consola PlayStation.</p>
+                    </div>
+                </a>
+    
+                <a class="link card card__horizontal-small" href="#" title="">
+                    <img loading="lazy" src="https://www.wasd.pt/wp-content/uploads/2022/10/GothamKnights.jpg" alt="">
+                    <div>
+                        <h3 class="link-underline"><span>Análise – Gotham Knights</span></h2>
+                        <p>Voltámos a Gotham mas não na companhia do "suspeito do costume".</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-span-2 md:col-span-1">
+                <a class="link card card__horizontal-small" href="#" title="">
+                    <img loading="lazy" src="https://www.wasd.pt/wp-content/uploads/2023/01/Hi-Fi-RUSH-2-696x392.webp" alt="">
+                    <div>
+                        <h3 class="link-underline"><span>Análise – Hi-Fi Rush</span></h2>
+                        <p>Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor</p>
+                    </div>
+                </a>
+    
+                <a class="link card card__horizontal-small" href="#" title="">
+                    <img loading="lazy" src="https://www.wasd.pt/wp-content/uploads/2023/01/MHRise-9-696x392.jpg" alt="">
+                    <div>
+                        <h3 class="link-underline"><span>Análise – Monster Hunter: Rise</span></h2>
+                        <p>Lorem ipsum dolor Lorem ipsum dolor Lorem dolor Lorem ipsum dolor</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container mx-auto grid grid-cols-review mb-10" id="comments">
+        <div class="col-span-2">
+            <h2 class="font-gradient font-bold">Comentários</h2>
+        </div>
+        <div class="col-span-2 lg:col-span-1" id="disqus_thread"></div>
+        <script>
+            /**
+            *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+            *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+            
+            var disqus_config = function () {
+            this.page.url = 'http://dummy.com';  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = 'analise-hogwars-analise'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+            };
+            
+            (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://wasdstaging.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+            })();
+
+            // Disqus theme switching
+            document.addEventListener('themeChanged', function (e) { 
+                if (document.readyState == 'complete') {
+                    DISQUS.reset({ reload: true, config: disqus_config });
+                }
+            });
+        </script>
+    </div>
+
+
+    <footer class="border-t-2 border-lightSecondary dark:border-darkSecondary py-8">
+        <div class="container mx-auto grid grid-cols-1 justify-center lg:grid-cols-4">
+            <div class="text-center lg:text-left mb-10 lg:mb-0">
+                <h4 class="font-gradient font-bold text-sm mb-3">Podem encontrar-nos em:</h4>
+                <ul class="flex justify-center lg:justify-start gap-5 md:gap-3">
+                    <li>
+                        <a class="group outline-offset-4 outline-gray-300 dark:outline-darkSecondary" href="#" title="Facebook" target="_blank">
+                            <svg class="group-hover:scale-110" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="group outline-offset-4 outline-gray-300 dark:outline-darkSecondary" href="#" title="Twitter" target="_blank">
+                            <svg class="group-hover:scale-110" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="group outline-offset-4 outline-gray-300 dark:outline-darkSecondary" href="#" title="Discord" target="_blank">
+                            <svg class="group-hover:scale-110" width="24" height="24" viewBox="0 -28.5 256 256" fill="currentColor" preserveAspectRatio="xMidYMid">
+                                <path d="M216.856339,16.5966031 C200.285002,8.84328665 182.566144,3.2084988 164.041564,0 C161.766523,4.11318106 159.108624,9.64549908 157.276099,14.0464379 C137.583995,11.0849896 118.072967,11.0849896 98.7430163,14.0464379 C96.9108417,9.64549908 94.1925838,4.11318106 91.8971895,0 C73.3526068,3.2084988 55.6133949,8.86399117 39.0420583,16.6376612 C5.61752293,67.146514 -3.4433191,116.400813 1.08711069,164.955721 C23.2560196,181.510915 44.7403634,191.567697 65.8621325,198.148576 C71.0772151,190.971126 75.7283628,183.341335 79.7352139,175.300261 C72.104019,172.400575 64.7949724,168.822202 57.8887866,164.667963 C59.7209612,163.310589 61.5131304,161.891452 63.2445898,160.431257 C105.36741,180.133187 151.134928,180.133187 192.754523,160.431257 C194.506336,161.891452 196.298154,163.310589 198.110326,164.667963 C191.183787,168.842556 183.854737,172.420929 176.223542,175.320965 C180.230393,183.341335 184.861538,190.991831 190.096624,198.16893 C211.238746,191.588051 232.743023,181.531619 254.911949,164.955721 C260.227747,108.668201 245.831087,59.8662432 216.856339,16.5966031 Z M85.4738752,135.09489 C72.8290281,135.09489 62.4592217,123.290155 62.4592217,108.914901 C62.4592217,94.5396472 72.607595,82.7145587 85.4738752,82.7145587 C98.3405064,82.7145587 108.709962,94.5189427 108.488529,108.914901 C108.508531,123.290155 98.3405064,135.09489 85.4738752,135.09489 Z M170.525237,135.09489 C157.88039,135.09489 147.510584,123.290155 147.510584,108.914901 C147.510584,94.5396472 157.658606,82.7145587 170.525237,82.7145587 C183.391518,82.7145587 193.761324,94.5189427 193.539891,108.914901 C193.539891,123.290155 183.391518,135.09489 170.525237,135.09489 Z" fill-rule="nonzero"></path>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="group outline-offset-4 outline-gray-300 dark:outline-darkSecondary" href="#" title="Youtube" target="_blank">
+                            <svg class="group-hover:scale-110" width="24" height="24" viewBox="0 0 24 24">
+                                <path fill="currentColor" d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
+                                <polygon class="fill-white dark:fill-darkSecondary" points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="group outline-offset-4 outline-gray-300 dark:outline-darkSecondary" href="#" title="Tik Tok" target="_blank">
+                            <svg class="group-hover:scale-110" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M19.589 6.686a4.793 4.793 0 0 1-3.77-4.245V2h-3.445v13.672a2.896 2.896 0 0 1-5.201 1.743l-.002-.001.002.001a2.895 2.895 0 0 1 3.183-4.51v-3.5a6.329 6.329 0 0 0-5.394 10.692 6.33 6.33 0 0 0 10.857-4.424V8.687a8.182 8.182 0 0 0 4.773 1.526V6.79a4.831 4.831 0 0 1-1.003-.104z"/>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="group outline-offset-4 outline-gray-300 dark:outline-darkSecondary" href="#" title="Instagram" target="_blank">
+                            <svg class="group-hover:scale-110" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-span-2 text-center lg:text-left mb-10 lg:mb-0">
+                <h4 class="font-gradient font-semibold text-sm mb-3">Mais sobre nós:</h4>
+                <ul class="flex gap-3 flex-col text-sm lg:flex-row whitespace-nowrap">
+                    <li><a class="link focus-within:text-primary outline-none" href="#" title="">Quem somos</a></li>
+                    <li><a class="link focus-within:text-primary outline-none" href="#" title="">A nossa missão</a></li>
+                    <li><a class="link focus-within:text-primary outline-none" href="#" title="">Política de privacidade</a></li>
+                    <li><a class="link focus-within:text-primary outline-none" href="#" title="">Contactos</a></li>
+                    <li><a class="link focus-within:text-primary outline-none" href="#" title="">Acessibilidade</a></li>
+                </ul>
+            </div>
+            <div class="text-gray-400 font-semibold text-sm flex items-end justify-center lg:justify-end">
+                &copy; WASD 2010 - 2023
+            </div>
+        </div>
+    </footer>
+ 
+    <script src="src/js/script.js"></script>
+
+</body>
+</html>

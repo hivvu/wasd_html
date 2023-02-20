@@ -1,0 +1,34 @@
+.game-releases{
+    &__see-more{
+        @apply 
+            shrink-0 
+            border-dashed 
+            border-4 
+            border-gray-400
+            hover:border-gray-500 
+            focus-visible:border-gray-500
+            dark:border-gray-500
+            dark:hover:border-white 
+            dark:focus-visible:border-white 
+            hover:border-solid 
+            focus-visible:border-solid 
+            transition-all 
+            rounded-xl 
+            flex 
+            flex-col 
+            items-center 
+            justify-center 
+            w-44 
+            h-64 
+            outline-none;
+        
+        svg{
+            @apply mb-2 text-gray-400 dark:text-gray-500;
+        }
+        
+        span{
+            @apply text-gray-400 dark:text-gray-500 transition-all;
+        }
+    }
+} 
+

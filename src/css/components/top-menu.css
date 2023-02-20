@@ -1,0 +1,48 @@
+.top-menu{
+    @apply relative flex items-center flex-1;
+}
+
+.menu-toggle{
+    @apply items-center p-2 text-sm text-gray-500 hover:bg-lightSecondary border border-transparent dark:text-gray-400 dark:hover:bg-darkSecondary;
+
+    &.is-open{
+        @apply z-10 border-gray-100 rounded-t-lg bg-lightPrimary dark:bg-darkPrimary border border-b-0 border-gray-100 dark:border-darkSecondary;
+    }
+
+    &:focus-visible{
+        @apply outline-2 outline-offset-2 outline-gray-300 dark:outline-darkSecondary;
+    } 
+    
+    &:hover:not(.is-open){
+        @apply rounded-lg;
+    }
+}
+
+.menu {
+    @apply hidden absolute top-7 drop-shadow-md flex-col p-2 border rounded-r-lg rounded-b-lg bg-lightPrimary border-lightSecondary dark:bg-gray-800 dark:bg-darkPrimary dark:border-darkSecondary;
+    
+    &.is-open{
+        @apply flex;
+    }
+
+    ul:not(:first-child){
+        @apply border-t-2 dark:border-t-2 border-lightSecondary dark:border-darkSecondary mt-2 pt-2;
+    }
+    
+    li{
+        @apply mb-[2px];
+    }
+
+    li a{
+        @apply w-auto py-1 px-4 block text-gray-700 rounded hover:bg-gray-100  dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white dark:hover:bg-transparent;
+
+        &:hover,
+        &.is-current{
+            @apply rounded-lg bg-lightSecondary dark:bg-darkSecondary;
+        }
+    }
+
+    .social-networks a{
+        @apply w-auto p-1 hover:bg-none;
+    }
+}
