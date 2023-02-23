@@ -206,7 +206,7 @@
                 </svg>
                 <span>Filtros</span> 
             </button>
-            <div class="hidden grid md:grid-cols-3 md:gap-5 sm:gap-y-5 absolute top-full w-full bg-white dark:bg-black p-4 border border-t-0 rounded-lg rounded-tl-none" id="filters">
+            <div class="hidden grid md:grid-cols-3 md:gap-5 gap-y-5 absolute top-full w-full bg-white dark:bg-black p-4 border border-t-0 rounded-lg rounded-tl-none" id="filters">
                 <div class="md:border-r col-span-3 md:col-span-1">
                     <span class="font-bold mb-4 block text-sm">Tipo de conteúdo</span>
                     <div class="flex items-center mb-2">
@@ -278,7 +278,7 @@
                     <circle fill="transparent" cx="11" cy="11" r="8"></circle>
                     <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
                 </svg>
-                <input class="w-full pl-12 border rounded-tr-lg rounded-br-lg  p-2 dark:bg-darkPrimary placeholder:italic" type="text" id="search-filter" placeholder="Título, Editora, Produtora">
+                <input class="w-full pl-12 border rounded-tr-lg rounded-br-lg p-2 dark:bg-darkPrimary placeholder:italic" type="text" id="search-filter" placeholder="Título, Editora, Produtora">
             </div>
         
             <button type="submit" class="sr-only" tabindex="-1">
@@ -348,6 +348,40 @@
                 </div>
             </a>
         </article>
+
+        <div class="container mx-auto flex justify-center">
+            <nav class="pagination" aria-label="Paginação">
+                <ul class="inline-flex items-center -space-x-px gap-3">
+                  <li>
+                    <a href="#">
+                      <span class="sr-only">Anterior</span>
+                      <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">1</a>
+                  </li>
+                  <li>
+                    <a href="#">2</a>
+                  </li>
+                  <li>
+                    <a href="#" aria-current="page" class="is-current">3</a>
+                  </li>
+                  <li>
+                    <a href="#">4</a>
+                  </li>
+                  <li>
+                    <a href="#">5</a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <span class="sr-only">Seguinte</span>
+                      <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+        </div>
     </div>
 
 
