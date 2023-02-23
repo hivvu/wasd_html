@@ -25,12 +25,16 @@
 .custom-scrollbar{
     @apply 
         scrollbar 
-        scrollbar-thin 
+        scrollbar-thin
         scrollbar-thumb-rounded 
         scrollbar-thumb-primary
         scrollbar-track-slate-200 
         scrollbar-track-rounded 
         dark:scrollbar-track-slate-700;
+}
+/* Override default height */
+.scrollbar-thin::-webkit-scrollbar{
+    height: 4px;
 }
 
 .inset-0{

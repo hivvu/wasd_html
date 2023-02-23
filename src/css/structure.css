@@ -113,3 +113,10 @@ ul.review-dislikes {
        @apply outline-offset-4 outline-gray-300 dark:outline-darkSecondary;         
     }
 }
+
+
+.filters-toggle{
+    &.is-open{
+        @apply rounded-bl-none border-b-transparent;
+    }
+}

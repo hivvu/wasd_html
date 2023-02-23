@@ -106,3 +106,41 @@ window.addEventListener('scroll', function (event) {
 // 		element.classList.add('js-animate');
 // 	}
 // }, false);
+
+
+// FILTERS  
+var filtersToggler = document.querySelector('.filters-toggle');
+var filterWrapper = document.querySelector('#filters');
+var clearFilters = document.querySelector('.clear-filters');
+var applyFilters = document.querySelector('.apply-filters');
+var checkboxes = document.querySelectorAll('#filters input[type=checkbox]');
+var numFiltersApplied = 0;
+
+filtersToggler.onclick = () => {
+    filterWrapper.classList.toggle('hidden');
+    filtersToggler.classList.toggle('is-open');
+}
+
+clearFilters.onclick = () => {
+    Array.prototype.forEach.call(checkboxes, function(el, index, array){
+        el.checked = false;
+    });
+    numFiltersApplied = 0;
+    filtersToggler.getElementsByTagName('span')[0].innerHTML = filtersToggler.attributes['data-label'].value;
+}
+
+applyFilters.onclick = () => {
+    filterWrapper.classList.toggle('hidden');
+    filtersToggler.classList.toggle('is-open');
+    numFiltersApplied = 0;
+
+    Array.prototype.forEach.call(checkboxes, function(el, index, array){
+        if (el.checked){
+            numFiltersApplied++;
+        };
+    });
+    if (numFiltersApplied > 0){
+        filtersToggler.getElementsByTagName('span')[0].innerHTML = filtersToggler.attributes['data-label'].value + ' ('+numFiltersApplied+')';
+    } 
+}
+    
