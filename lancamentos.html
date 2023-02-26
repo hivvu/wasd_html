@@ -190,13 +190,20 @@
         </nav>
     </div>
 
-    <div class="container mx-auto mb-10 text-center">
-        <h1 class="text-3xl font-gradient font-bold">Resultados da pesquisa</h1> 
-    </div>  
+    <div class="container mx-auto text-center mb-10">
+        <h1 class="text-3xl font-gradient font-bold">Próximos lançamentos do ano</h1> 
+    </div>
+
+    <div class="container mx-auto pub pub-leaderboard">
+        <a href="#" target="_blank">
+            <img loading="lazy" src="https://www.wasd.pt/wp-content/uploads/2022/10/WASD-EswapS-728x90-1.jpg" alt="">
+        </a>
+        <div class="text-xs text-gray-400 text-right items-end">Pub</div>
+    </div>
 
     <div class="container mx-auto mb-14 ">
         <form class="flex flex-row relative">
-            <button type="button" data-label="Filtros" aria-controls="filters" aria-expanded="false" class="filters-toggle">
+            <button type="button" data-label="Filtros" aria-controls="filters" aria-expanded="false" class="filters-toggle border rounded-tl-lg rounded-bl-lg border-r-0 p-2 dark:bg-darkPrimary flex flex-row items-center gap-2 px-4">
                 <svg class="icon-filters" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <line x1="4" y1="21" x2="4" y2="14"></line><line x1="4" y1="10" x2="4" y2="3"></line>
                     <line x1="12" y1="21" x2="12" y2="12"></line><line x1="12" y1="8" x2="12" y2="3"></line>
@@ -208,67 +215,62 @@
                     <line x1="18" y1="6" x2="6" y2="18"></line>
                     <line x1="6" y1="6" x2="18" y2="18"></line>
                 </svg>
-                <span>Filtros</span> 
+                <span>Plataformas</span> 
             </button>
-            <div class="hidden grid md:grid-cols-3 md:gap-5 gap-y-5 absolute top-full w-full bg-white dark:bg-black p-4 border border-t-0 rounded-lg rounded-tl-none" id="filters">
-                <div class="md:border-r col-span-3 md:col-span-1">
-                    <span class="font-bold mb-4 block text-sm">Tipo de conteúdo</span>
-                    <div class="flex items-center mb-2">
-                        <input id="artigos" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:border-primary">
-                        <label for="artigos" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Artigos</label>
-                    </div>
-                    <div class="flex items-center mb-2">
-                        <input id="analises" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:border-primary">
-                        <label for="analises" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Análises</label>
-                    </div>
-                    <div class="flex items-center mb-2">
-                        <input id="noticias" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:border-primary">
-                        <label for="noticias" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Notícias</label>
-                    </div>
-                    <div class="flex items-center mb-2">
-                        <input id="hardware" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:border-primary">
-                        <label for="hardware" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Hardware</label>
-                    </div>
-                </div>
-                <div class="md:border-r col-span-3 md:col-span-1">
-                    <span class="font-bold mb-4 block text-sm">Plataformas</span>
-                    <div class="flex items-center mb-2">
+            <div class="hidden absolute top-full w-full bg-white dark:bg-black p-4 border border-t-0 rounded-lg rounded-tl-none" id="filters">
+                
+                <div class="flex flex-row flex-wrap align-top">
+                    <div class="flex items-center mb-2 mr-6 w-40">
                         <input id="ps3" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 dark:bg-black border-gray-300 rounded focus:border-primary">
                         <label for="ps3" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">PlayStation 3</label>
                     </div>
-                    <div class="flex items-center mb-2">
+                    <div class="flex items-center mb-2 mr-6 w-40">
                         <input id="ps4" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:border-primary">
                         <label for="ps4" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">PlayStation 4</label>
                     </div>
-                    <div class="flex items-center mb-2">
+                    <div class="flex items-center mb-2 mr-6 w-40">
                         <input id="xbox-series" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:border-primary">
                         <label for="xbox-series" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Xbox Series S|X</label>
                     </div>
-                    <div class="flex items-center mb-2">
+                    <div class="flex items-center mb-2 mr-6 w-40">
                         <input id="switch" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:border-primary">
                         <label for="switch" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Nintendo Switch</label>
                     </div>
+                    <div class="flex items-center mb-2 mr-6 w-40">
+                        <input id="ps3" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 dark:bg-black border-gray-300 rounded focus:border-primary">
+                        <label for="ps3" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">PlayStation 3</label>
+                    </div>
+                    <div class="flex items-center mb-2 mr-6 w-40">
+                        <input id="ps4" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:border-primary">
+                        <label for="ps4" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">PlayStation 4</label>
+                    </div>
+                    <div class="flex items-center mb-2 mr-6 w-40">
+                        <input id="xbox-series" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:border-primary">
+                        <label for="xbox-series" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Xbox Series S|X</label>
+                    </div>
+                    <div class="flex items-center mb-2 mr-6 w-40">
+                        <input id="switch" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:border-primary">
+                        <label for="switch" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Nintendo Switch</label>
+                    </div>
+                    <div class="flex items-center mb-2 mr-6 w-40">
+                        <input id="ps3" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 dark:bg-black border-gray-300 rounded focus:border-primary">
+                        <label for="ps3" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">PlayStation 3</label>
+                    </div>
+                    <div class="flex items-center mb-2 mr-6 w-40">
+                        <input id="ps4" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:border-primary">
+                        <label for="ps4" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">PlayStation 4</label>
+                    </div>
+                    <div class="flex items-center mb-2 mr-6 w-40">
+                        <input id="xbox-series" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:border-primary">
+                        <label for="xbox-series" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Xbox Series S|X</label>
+                    </div>
+                    <div class="flex items-center mb-2 mr-6 w-40">
+                        <input id="switch" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:border-primary">
+                        <label for="switch" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Nintendo Switch</label>
+                    </div>  
                 </div>
-                <div class=" col-span-3 md:col-span-1">
-                    <span class="font-bold mb-4 block text-sm">Género</span>
-                    <div class="flex items-center mb-2">
-                        <input id="accao" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:border-primary">
-                        <label for="accao" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Acção</label>
-                    </div>
-                    <div class="flex items-center mb-2">
-                        <input id="rpg" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:border-primary">
-                        <label for="rpg" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">RPG</label>
-                    </div>
-                    <div class="flex items-center mb-2">
-                        <input id="fps" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:border-primary">
-                        <label for="fps" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">FPS</label>
-                    </div>
-                    <div class="flex items-center mb-2">
-                        <input id="survival-horror" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:border-primary">
-                        <label for="survival-horror" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Survival horror</label>
-                    </div>
-                </div>
-                <div class="col-span-3 flex justify-between">
+                
+                <div class="col-span-3 flex justify-between mt-6">
                     <button class="clear-filters text-sm link text-primary hover:underline" type="button">Limpar filtros</button>
                     <button class="apply-filters btn btn--primary text-sm" id="apply">Aplicar filtros</button>
                 </div>
@@ -277,12 +279,12 @@
             <label for="search-filter" class="sr-only">
                 <span>Pesquisa</span>
             </label>
-            <div class="relative flex-auto group">
+            <div class="relative flex-auto">
                 <svg class="absolute top-2 left-3 stroke-gray-400 dark:stroke-white" stroke-width="2" width="24" height="24" viewBox="0 0 24 24">
                     <circle fill="transparent" cx="11" cy="11" r="8"></circle>
                     <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
                 </svg>
-                <input class="w-full pl-12 border rounded-tr-lg rounded-br-lg p-2 dark:bg-darkPrimary placeholder:italic focus:border-gray-600 outline-none" type="text" id="search-filter" placeholder="Título, Editora, Produtora">
+                <input class="w-full pl-12 border rounded-tr-lg rounded-br-lg p-2 dark:bg-darkPrimary placeholder:italic" type="text" id="search-filter" placeholder="Título">
             </div>
         
             <button type="submit" class="sr-only" tabindex="-1">
@@ -291,103 +293,194 @@
         </form>
     </div>
 
-    <div class="container mx-auto flex flex-wrap justify-between mb-10">
-        <article class="inline-block mb-10 w-full md:w-2/4">
-            <a href="#" class="link max-w-2xl grid grid-cols-2 gap-5">
-                <img loading="lazy" src="https://www.wasd.pt/wp-content/uploads/2023/02/evil-below.jpg" class="aspect-video w-full rounded-xl" alt="Image 1">
-                <div class="md:w-11/12 flex flex-col">
-                    <h2 class="link-underline mb-2 text-sm lg:text-lg font-bold leading-tight">
-                        <span>Análise – Evil Below</span>
-                    </h2>
-                    <p class="text-sm flex-auto mb-4 font-light text-gray-500 dark:text-gray-400">Nem tudo o que é nacional é bom...</p>
-                    <span class="comment-count block lg:block md:hidden">1 Comentários</span>
-                </div>
-            </a>
-        </article>
-        <article class="inline-block mb-10 w-full md:w-2/4">
-            <a href="#" class="link max-w-2xl grid grid-cols-2 gap-5">
-                <img loading="lazy" src="https://www.wasd.pt/wp-content/uploads/2023/02/Company-of-Heroes-3-1.jpg" class="aspect-video w-full rounded-xl" alt="Image 1">
-                <div class="md:w-11/12 flex flex-col">
-                    <h2 class="link-underline mb-2 text-sm lg:text-lg font-bold leading-tight">
-                        <span>Análise – Company of Heroes 3</span>
-                    </h2>
-                    <p class="text-sm flex-auto mb-4 font-light text-gray-500 dark:text-gray-400">A grande estratégia está de volta e é realmente tudo o que pedimos.</p>
-                    <span class="comment-count block lg:block md:hidden">1 Comentários</span>
-                </div>
-            </a>
-        </article>
-        <article class="inline-block mb-10 w-full md:w-2/4">
-            <a href="#" class="link max-w-2xl grid grid-cols-2 gap-5">
-                <img loading="lazy" src="https://www.wasd.pt/wp-content/uploads/2023/02/wild-hearts.webp" class="aspect-video w-full rounded-xl" alt="Image 1">
-                <div class="md:w-11/12 flex flex-col">
-                    <h2 class="link-underline mb-2 text-sm lg:text-lg font-bold leading-tight">
-                        <span>Análise – Wild Hearts</span>
-                    </h2>
-                    <p class="text-sm flex-auto mb-4 font-light text-gray-500 dark:text-gray-400">Uma boa alternativa a Monster Hunter.</p>
-                    <span class="comment-count block lg:block md:hidden">1 Comentários</span>
-                </div>
-            </a>
-        </article>
-        <article class="inline-block mb-6 w-full md:w-2/4">
-            <a href="#" class="link max-w-2xl grid grid-cols-2 gap-5">
-                <img loading="lazy" src="https://www.wasd.pt/wp-content/uploads/2023/02/AtomicHeart-1-e1676882360673.jpg" class="aspect-video w-full rounded-xl" alt="Image 1">
-                <div class="md:w-11/12 flex flex-col">
-                    <h2 class="link-underline mb-2 text-sm lg:text-lg font-bold leading-tight">
-                        <span>Análise – Atomic Heart</span>
-                    </h2>
-                    <p class="text-sm flex-auto mb-4 font-light text-gray-500 dark:text-gray-400">Da União Soviética... com muito ódio.</p>
-                    <span class="comment-count block lg:block md:hidden">1 Comentários</span>
-                </div>
-            </a>
-        </article>
-        <article class="inline-block mb-6 w-full md:w-2/4">
-            <a href="#" class="link max-w-2xl grid grid-cols-2 gap-5">
-                <img loading="lazy" src="https://www.wasd.pt/wp-content/uploads/2022/11/Bayonetta-3-HD-scaled-1.jpg" class="aspect-video w-full rounded-xl" alt="Image 1">
-                <div class="md:w-11/12 flex flex-col">
-                    <h2 class="link-underline mb-2 text-sm lg:text-lg font-bold leading-tight">
-                        <span>Análise – Bayonetta 3</span>
-                    </h2>
-                    <p class="text-sm flex-auto mb-4 font-light text-gray-500 dark:text-gray-400">Depois de anos à espera, a bruxa lá apareceu.</p>
-                    <span class="comment-count block lg:block md:hidden">1 Comentários</span>
-                </div>
-            </a>
-        </article>
+    <div class="game-releases horizontal-scroll">
+        <div class="container mx-auto pb-10">
+            <h2 class="font-gradient text-2xl font-bold mb-8">Março 2023</h2>
+            
+            <div class="horizontal-scroll__content custom-scrollbar">
+                <div class="horizontal-scroll__inner-content">
+                    <a href="#" title="" class="link card card__gamecover">
+                        <img loading="lazy" src="https://images.igdb.com/igdb/image/upload/t_cover_big/co4ti4.jpg" alt="">
+                        <div>
+                            <h3 class="link-underline"><span>Horizon Call of the Mountain</span></h3>
+                            <span class="platforms">PS5, PSVR2</span>
+                            <time datetime="2018-07-07">7 de Julho</time>
+                        </div>
+                    </a>
 
-        <div class="container mx-auto flex justify-center">
-            <nav class="pagination" aria-label="Paginação">
-                <ul class="inline-flex items-center -space-x-px gap-3">
-                  <li>
-                    <a href="#">
-                      <span class="sr-only">Anterior</span>
-                      <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                    <div class="card card__gamecover">
+                        <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/en/thumb/8/8f/The_Callisto_Protocol_cover_art.jpg/220px-The_Callisto_Protocol_cover_art.jpg" alt="">
+                        <div>
+                            <h3><span>The Callisto Protocol</span></h3>
+                            <span class="platforms">PC, PS5, XBSX</span>
+                            <time datetime="2018-07-07">7 de Julho</time>
+                        </div>
+                    </div>
+
+                    <a href="#" title="" class="link card card__gamecover">
+                        <img loading="lazy" src="https://static.wikia.nocookie.net/starwars/images/8/82/Star_Wars_Jedi_Survivor_cover_art.jpg" alt="">
+                        <div>
+                            <h3 class="link-underline"><span>Star Wars: Jedi Survivor</span></h3>
+                            <span class="platforms">PC, PS5, XBSX</span>
+                            <time datetime="2018-07-07">14 de Março 2023</time>
+                        </div>
                     </a>
-                  </li>
-                  <li>
-                    <a href="#">1</a>
-                  </li>
-                  <li>
-                    <a href="#">2</a>
-                  </li>
-                  <li>
-                    <a href="#" aria-current="page" class="is-current">3</a>
-                  </li>
-                  <li>
-                    <a href="#">4</a>
-                  </li>
-                  <li>
-                    <a href="#">5</a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <span class="sr-only">Seguinte</span>
-                      <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+                    <a href="#" title="" class="link card card__gamecover">
+                        <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/en/thumb/8/8f/The_Callisto_Protocol_cover_art.jpg/220px-The_Callisto_Protocol_cover_art.jpg" alt="">
+                        <div>
+                            <h3 class="link-underline"><span>The Callisto Protocol</span></h3>
+                            <span class="platforms">PC, PS5, XBSX</span>
+                            <time datetime="2018-07-07">7 de Julho</time>
+                        </div>
                     </a>
-                  </li>
-                </ul>
-              </nav>
+
+                    <a href="#" title="" class="link card card__gamecover">
+                        <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/en/thumb/8/8f/The_Callisto_Protocol_cover_art.jpg/220px-The_Callisto_Protocol_cover_art.jpg" alt="">
+                        <div>
+                            <h3 class="link-underline"><span>The Callisto Protocol</span></h3>
+                            <span class="platforms">PC, PS5, XBSX</span>
+                            <time datetime="2018-07-07">7 de Julho</time>
+                        </div>
+                    </a>
+
+                    <a href="#" title="" class="link card card__gamecover">
+                        <img loading="lazy" src="https://static.wikia.nocookie.net/starwars/images/8/82/Star_Wars_Jedi_Survivor_cover_art.jpg" alt="">
+                        <div>
+                            <h3 class="link-underline"><span>Star Wars: Jedi Survivor</span></h3>
+                            <span class="platforms">PC, PS5, XBSX</span>
+                            <time datetime="2018-07-07">14 de Março 2023</time>
+                        </div>
+                    </a>
+
+                    <a href="#" title="" class="link card card__gamecover">
+                        <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/en/thumb/8/8f/The_Callisto_Protocol_cover_art.jpg/220px-The_Callisto_Protocol_cover_art.jpg" alt="">
+                        <div>
+                            <h3 class="link-underline"><span>The Callisto Protocol</span></h3>
+                            <span class="platforms">PC, PS5, XBSX</span>
+                            <time datetime="2018-07-07">7 de Julho</time>
+                        </div>
+                    </a>
+
+                    <a href="#" title="" class="link card card__gamecover">
+                        <img loading="lazy" src="https://static.wikia.nocookie.net/starwars/images/8/82/Star_Wars_Jedi_Survivor_cover_art.jpg" alt="">
+                        <div>
+                            <h3 class="link-underline"><span>Star Wars: Jedi Survivor</span></h3>
+                            <span class="platforms">PC, PS5, XBSX</span>
+                            <time datetime="2018-07-07">14 de Março 2023</time>
+                        </div>
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
 
+    <div class="game-releases horizontal-scroll">
+        <div class="container mx-auto pb-10">
+            <h2 class="font-gradient text-2xl font-bold mb-8">Abril 2023</h2>
+            
+            <div class="horizontal-scroll__content custom-scrollbar">
+                <div class="horizontal-scroll__inner-content">
+                    <a href="#" title="" class="link card card__gamecover">
+                        <img loading="lazy" src="https://images.igdb.com/igdb/image/upload/t_cover_big/co4ti4.jpg" alt="">
+                        <div>
+                            <h3 class="link-underline"><span>Horizon Call of the Mountain</span></h3>
+                            <span class="platforms">PS5, PSVR2</span>
+                            <time datetime="2018-07-07">7 de Julho</time>
+                        </div>
+                    </a>
+
+                    <div class="card card__gamecover">
+                        <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/en/thumb/8/8f/The_Callisto_Protocol_cover_art.jpg/220px-The_Callisto_Protocol_cover_art.jpg" alt="">
+                        <div>
+                            <h3><span>The Callisto Protocol</span></h3>
+                            <span class="platforms">PC, PS5, XBSX</span>
+                            <time datetime="2018-07-07">7 de Julho</time>
+                        </div>
+                    </div>
+
+                    <a href="#" title="" class="link card card__gamecover">
+                        <img loading="lazy" src="https://static.wikia.nocookie.net/starwars/images/8/82/Star_Wars_Jedi_Survivor_cover_art.jpg" alt="">
+                        <div>
+                            <h3 class="link-underline"><span>Star Wars: Jedi Survivor</span></h3>
+                            <span class="platforms">PC, PS5, XBSX</span>
+                            <time datetime="2018-07-07">14 de Março 2023</time>
+                        </div>
+                    </a>
+                    <a href="#" title="" class="link card card__gamecover">
+                        <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/en/thumb/8/8f/The_Callisto_Protocol_cover_art.jpg/220px-The_Callisto_Protocol_cover_art.jpg" alt="">
+                        <div>
+                            <h3 class="link-underline"><span>The Callisto Protocol</span></h3>
+                            <span class="platforms">PC, PS5, XBSX</span>
+                            <time datetime="2018-07-07">7 de Julho</time>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="game-releases horizontal-scroll">
+        <div class="container mx-auto pb-10">
+            <h2 class="font-gradient text-2xl font-bold mb-8">Maio 2023</h2>
+            
+            <div class="horizontal-scroll__content custom-scrollbar">
+                <div class="horizontal-scroll__inner-content">
+                    <a href="#" title="" class="link card card__gamecover">
+                        <img loading="lazy" src="https://images.igdb.com/igdb/image/upload/t_cover_big/co4ti4.jpg" alt="">
+                        <div>
+                            <h3 class="link-underline"><span>Horizon Call of the Mountain</span></h3>
+                            <span class="platforms">PS5, PSVR2</span>
+                            <time datetime="2018-07-07">7 de Julho</time>
+                        </div>
+                    </a>
+
+                    <div class="card card__gamecover">
+                        <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/en/thumb/8/8f/The_Callisto_Protocol_cover_art.jpg/220px-The_Callisto_Protocol_cover_art.jpg" alt="">
+                        <div>
+                            <h3><span>The Callisto Protocol</span></h3>
+                            <span class="platforms">PC, PS5, XBSX</span>
+                            <time datetime="2018-07-07">7 de Julho</time>
+                        </div>
+                    </div>
+
+                    <a href="#" title="" class="link card card__gamecover">
+                        <img loading="lazy" src="https://static.wikia.nocookie.net/starwars/images/8/82/Star_Wars_Jedi_Survivor_cover_art.jpg" alt="">
+                        <div>
+                            <h3 class="link-underline"><span>Star Wars: Jedi Survivor</span></h3>
+                            <span class="platforms">PC, PS5, XBSX</span>
+                            <time datetime="2018-07-07">14 de Março 2023</time>
+                        </div>
+                    </a>
+                    <a href="#" title="" class="link card card__gamecover">
+                        <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/en/thumb/8/8f/The_Callisto_Protocol_cover_art.jpg/220px-The_Callisto_Protocol_cover_art.jpg" alt="">
+                        <div>
+                            <h3 class="link-underline"><span>The Callisto Protocol</span></h3>
+                            <span class="platforms">PC, PS5, XBSX</span>
+                            <time datetime="2018-07-07">7 de Julho</time>
+                        </div>
+                    </a>
+
+                    <a href="#" title="" class="link card card__gamecover">
+                        <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/en/thumb/8/8f/The_Callisto_Protocol_cover_art.jpg/220px-The_Callisto_Protocol_cover_art.jpg" alt="">
+                        <div>
+                            <h3 class="link-underline"><span>The Callisto Protocol</span></h3>
+                            <span class="platforms">PC, PS5, XBSX</span>
+                            <time datetime="2018-07-07">7 de Julho</time>
+                        </div>
+                    </a>
+
+                    <a href="#" title="" class="link card card__gamecover">
+                        <img loading="lazy" src="https://static.wikia.nocookie.net/starwars/images/8/82/Star_Wars_Jedi_Survivor_cover_art.jpg" alt="">
+                        <div>
+                            <h3 class="link-underline"><span>Star Wars: Jedi Survivor</span></h3>
+                            <span class="platforms">PC, PS5, XBSX</span>
+                            <time datetime="2018-07-07">14 de Março 2023</time>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <footer class="border-t-2 border-lightSecondary dark:border-darkSecondary py-8">
         <div class="container mx-auto grid grid-cols-1 justify-center lg:grid-cols-4">
@@ -458,6 +551,5 @@
     </footer>
  
     <script src="src/js/script.js"></script>
-
 </body>
 </html>

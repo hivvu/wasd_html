@@ -25,7 +25,7 @@ body{
 }
 
 .horizontal-scroll{
-    @apply mx-auto bg-lightSecondary dark:bg-darkSecondary mb-10;
+    @apply mx-auto mb-10;
 
     &__content{
         @apply overflow-x-auto pb-8 p-1.5;
@@ -154,3 +154,71 @@ ul.review-dislikes {
         }
     }
 }
+
+.filters-toggle{
+    @apply 
+        border 
+        rounded-tl-lg 
+        rounded-bl-lg 
+        border-r-0 
+        p-2 
+        dark:bg-darkPrimary 
+        flex 
+        flex-row 
+        items-center 
+        gap-2 
+        px-4 
+        border-r-transparent;
+        /* focus:outline-none */
+        /* outline:border-gray-600 
+        outline:border-r 
+        outline-none; */
+
+    &.is-open{
+        /* @apply border-b-transparent; */
+    }
+}
+
+/* .swiper, */
+.carrousel {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+    z-index: 1;
+
+    .prev-slide,
+    .next-slide{
+        @apply bg-lightPrimary dark:bg-darkPrimary dark:border dark:border-darkSecondary;
+        /* background: white; */
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: inline-block;
+
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto 0; 
+        z-index: 2; 
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        svg{
+            width: 40px;
+            height: 30px;
+        }
+    }
+    
+    .prev-slide{
+        left: -30px;
+        padding-left: 10px;
+    }
+
+    .next-slide{
+        right: -30px;
+        padding-right: 10px;
+    }
+  }

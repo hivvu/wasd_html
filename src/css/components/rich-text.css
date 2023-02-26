@@ -9,8 +9,17 @@
         @apply aspect-video w-full mb-10 rounded-2xl;
     }
 
+    figure{
+        @apply mb-10;
+    }
+
+    figcaption{
+        @apply ml-4 mt-2 before:content-[''] italic text-gray-500;
+    }
+    
     img{
-        @apply w-full mb-10 rounded-2xl;
+        /* mb-10 */
+        @apply w-full rounded-2xl;
     }
 
     p{

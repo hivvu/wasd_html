@@ -182,98 +182,27 @@
     <div class="container mx-auto flex items-center justify-center py-3">
         <nav class="main-menu">
             <ul class="">
-                <li><a class="is-current" href="#">Análises</a></li>
-                <li><a href="#">Notícias</a></li>
+                <li><a href="#">Análises</a></li>
+                <li><a class="is-current" href="#">Notícias</a></li>
                 <li><a href="#">Artigos</a></li>
                 <li><a href="#">Hardware</a></li>
             </ul>
         </nav>
     </div>
 
-    <div class="container mx-auto mb-10 text-center">
-        <h1 class="text-3xl font-gradient font-bold">Resultados da pesquisa</h1> 
-    </div>  
+    <h1 class="text-3xl font-gradient font-bold sr-only">Listagem de notícias</h1> 
+
+    <div class="container mx-auto pub pub-leaderboard">
+        <a href="#" target="_blank">
+            <img loading="lazy" src="https://www.wasd.pt/wp-content/uploads/2022/10/WASD-EswapS-728x90-1.jpg" alt="">
+        </a>
+        <div class="text-xs text-gray-400 text-right items-end">Pub</div>
+    </div>
+ 
 
     <div class="container mx-auto mb-14 ">
         <form class="flex flex-row relative">
-            <button type="button" data-label="Filtros" aria-controls="filters" aria-expanded="false" class="filters-toggle">
-                <svg class="icon-filters" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="4" y1="21" x2="4" y2="14"></line><line x1="4" y1="10" x2="4" y2="3"></line>
-                    <line x1="12" y1="21" x2="12" y2="12"></line><line x1="12" y1="8" x2="12" y2="3"></line>
-                    <line x1="20" y1="21" x2="20" y2="16"></line><line x1="20" y1="12" x2="20" y2="3"></line>
-                    <line x1="1" y1="14" x2="7" y2="14"></line><line x1="9" y1="8" x2="15" y2="8"></line>
-                    <line x1="17" y1="16" x2="23" y2="16"></line>
-                </svg>
-                <svg class="icon-close hidden" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="18" y1="6" x2="6" y2="18"></line>
-                    <line x1="6" y1="6" x2="18" y2="18"></line>
-                </svg>
-                <span>Filtros</span> 
-            </button>
-            <div class="hidden grid md:grid-cols-3 md:gap-5 gap-y-5 absolute top-full w-full bg-white dark:bg-black p-4 border border-t-0 rounded-lg rounded-tl-none" id="filters">
-                <div class="md:border-r col-span-3 md:col-span-1">
-                    <span class="font-bold mb-4 block text-sm">Tipo de conteúdo</span>
-                    <div class="flex items-center mb-2">
-                        <input id="artigos" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:border-primary">
-                        <label for="artigos" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Artigos</label>
-                    </div>
-                    <div class="flex items-center mb-2">
-                        <input id="analises" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:border-primary">
-                        <label for="analises" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Análises</label>
-                    </div>
-                    <div class="flex items-center mb-2">
-                        <input id="noticias" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:border-primary">
-                        <label for="noticias" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Notícias</label>
-                    </div>
-                    <div class="flex items-center mb-2">
-                        <input id="hardware" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:border-primary">
-                        <label for="hardware" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Hardware</label>
-                    </div>
-                </div>
-                <div class="md:border-r col-span-3 md:col-span-1">
-                    <span class="font-bold mb-4 block text-sm">Plataformas</span>
-                    <div class="flex items-center mb-2">
-                        <input id="ps3" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 dark:bg-black border-gray-300 rounded focus:border-primary">
-                        <label for="ps3" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">PlayStation 3</label>
-                    </div>
-                    <div class="flex items-center mb-2">
-                        <input id="ps4" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:border-primary">
-                        <label for="ps4" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">PlayStation 4</label>
-                    </div>
-                    <div class="flex items-center mb-2">
-                        <input id="xbox-series" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:border-primary">
-                        <label for="xbox-series" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Xbox Series S|X</label>
-                    </div>
-                    <div class="flex items-center mb-2">
-                        <input id="switch" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:border-primary">
-                        <label for="switch" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Nintendo Switch</label>
-                    </div>
-                </div>
-                <div class=" col-span-3 md:col-span-1">
-                    <span class="font-bold mb-4 block text-sm">Género</span>
-                    <div class="flex items-center mb-2">
-                        <input id="accao" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:border-primary">
-                        <label for="accao" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Acção</label>
-                    </div>
-                    <div class="flex items-center mb-2">
-                        <input id="rpg" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:border-primary">
-                        <label for="rpg" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">RPG</label>
-                    </div>
-                    <div class="flex items-center mb-2">
-                        <input id="fps" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:border-primary">
-                        <label for="fps" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">FPS</label>
-                    </div>
-                    <div class="flex items-center mb-2">
-                        <input id="survival-horror" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:border-primary">
-                        <label for="survival-horror" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Survival horror</label>
-                    </div>
-                </div>
-                <div class="col-span-3 flex justify-between">
-                    <button class="clear-filters text-sm link text-primary hover:underline" type="button">Limpar filtros</button>
-                    <button class="apply-filters btn btn--primary text-sm" id="apply">Aplicar filtros</button>
-                </div>
-            </div>
-
+            
             <label for="search-filter" class="sr-only">
                 <span>Pesquisa</span>
             </label>
@@ -282,13 +211,17 @@
                     <circle fill="transparent" cx="11" cy="11" r="8"></circle>
                     <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
                 </svg>
-                <input class="w-full pl-12 border rounded-tr-lg rounded-br-lg p-2 dark:bg-darkPrimary placeholder:italic focus:border-gray-600 outline-none" type="text" id="search-filter" placeholder="Título, Editora, Produtora">
+                <input class="w-full pl-12 border rounded-lg p-2 dark:bg-darkPrimary placeholder:italic focus:border-gray-600 outline-none" type="text" id="search-filter" placeholder="Título, Editora, Produtora">
             </div>
         
             <button type="submit" class="sr-only" tabindex="-1">
                 <span>Submeter pesquisa</span>
             </button>
         </form>
+    </div>
+
+    <div class="container mx-auto text-center">
+        <h2 class="text-2xl font-gradient font-bold">Todas as notícias</h2> 
     </div>
 
     <div class="container mx-auto flex flex-wrap justify-between mb-10">
@@ -389,6 +322,7 @@
     </div>
 
 
+
     <footer class="border-t-2 border-lightSecondary dark:border-darkSecondary py-8">
         <div class="container mx-auto grid grid-cols-1 justify-center lg:grid-cols-4">
             <div class="text-center lg:text-left mb-10 lg:mb-0">
@@ -458,6 +392,5 @@
     </footer>
  
     <script src="src/js/script.js"></script>
-
 </body>
 </html>

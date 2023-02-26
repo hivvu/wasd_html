@@ -109,38 +109,58 @@ window.addEventListener('scroll', function (event) {
 
 
 // FILTERS  
-var filtersToggler = document.querySelector('.filters-toggle');
-var filterWrapper = document.querySelector('#filters');
-var clearFilters = document.querySelector('.clear-filters');
-var applyFilters = document.querySelector('.apply-filters');
-var checkboxes = document.querySelectorAll('#filters input[type=checkbox]');
-var numFiltersApplied = 0;
+if (document.querySelectorAll('#filters').length){
+    var filtersToggler = document.querySelector('.filters-toggle');
+    var filterWrapper = document.querySelector('#filters');
+    var clearFilters = document.querySelector('.clear-filters');
+    var applyFilters = document.querySelector('.apply-filters');
+    var checkboxes = document.querySelectorAll('#filters input[type=checkbox]');
+    var iconFilter = document.querySelector('.icon-filters');
+    var iconClose = document.querySelector('.icon-close');
+    var numFiltersApplied = 0;
 
-filtersToggler.onclick = () => {
-    filterWrapper.classList.toggle('hidden');
-    filtersToggler.classList.toggle('is-open');
+    filtersToggler.onclick = () => {
+        filterWrapper.classList.toggle('hidden');
+        filtersToggler.classList.toggle('is-open');
+        iconFilter.classList.toggle('hidden');
+        iconClose.classList.toggle('hidden');
+    }
+
+    clearFilters.onclick = () => {
+        Array.prototype.forEach.call(checkboxes, function(el, index, array){
+            el.checked = false;
+        });
+        numFiltersApplied = 0;
+        filtersToggler.getElementsByTagName('span')[0].innerHTML = filtersToggler.attributes['data-label'].value;
+    }
+
+    applyFilters.onclick = () => {
+        filterWrapper.classList.toggle('hidden');
+        filtersToggler.classList.toggle('is-open');
+        numFiltersApplied = 0;
+
+        Array.prototype.forEach.call(checkboxes, function(el, index, array){
+            if (el.checked){
+                numFiltersApplied++;
+            };
+        });
+        if (numFiltersApplied > 0){
+            filtersToggler.getElementsByTagName('span')[0].innerHTML = filtersToggler.attributes['data-label'].value + ' ('+numFiltersApplied+')';
+        } 
+
+        iconFilter.classList.toggle('hidden');
+        iconClose.classList.toggle('hidden');
+    }
 }
 
-clearFilters.onclick = () => {
-    Array.prototype.forEach.call(checkboxes, function(el, index, array){
-        el.checked = false;
-    });
-    numFiltersApplied = 0;
-    filtersToggler.getElementsByTagName('span')[0].innerHTML = filtersToggler.attributes['data-label'].value;
-}
+//CARROUSEL
+const swiper = new Swiper('.carrousel', {
+    loop: true,
+    speed: 800,
+    navigation: {
+      nextEl: '.next-slide',
+      prevEl: '.prev-slide',
+    },
+});
 
-applyFilters.onclick = () => {
-    filterWrapper.classList.toggle('hidden');
-    filtersToggler.classList.toggle('is-open');
-    numFiltersApplied = 0;
-
-    Array.prototype.forEach.call(checkboxes, function(el, index, array){
-        if (el.checked){
-            numFiltersApplied++;
-        };
-    });
-    if (numFiltersApplied > 0){
-        filtersToggler.getElementsByTagName('span')[0].innerHTML = filtersToggler.attributes['data-label'].value + ' ('+numFiltersApplied+')';
-    } 
-}
-    
+swiper.init();
