@@ -3402,6 +3402,10 @@ h2{
   row-gap:1.25rem
 }
 
+.gap-y-10{
+  row-gap:2.5rem
+}
+
 .-space-x-px > :not([hidden]) ~ :not([hidden]){
   --tw-space-x-reverse:0;
   margin-right:calc(-1px * var(--tw-space-x-reverse));
@@ -4032,6 +4036,11 @@ h2{
 
   .md\:gap-5{
     gap:1.25rem
+  }
+
+  .md\:gap-x-10{
+    -moz-column-gap:2.5rem;
+         column-gap:2.5rem
   }
 
   .md\:border-r{
